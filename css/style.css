@@ -293,15 +293,26 @@ img {
     text-align: center;
     margin: 60px auto;
 }
+#portfolio .item {
+    position: relative;
+}
 #portfolio .item p{
     text-align: center;
-    display: inline-block;
+    display: block;
     padding: 30px 105px;
-    background-color: var(--white);
+    background-color:transparent;
+    color: transparent;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 #portfolio .item p:hover{
     text-align: center;
+    color: var(--dark-text);
     background-color: var(--section-background);
+    border-radius: 0 0 5px 5px;
+    transform: scale(.85);
 }
 /* testimonial section start */
 #testimonial .container .section-item{
@@ -314,19 +325,58 @@ img {
     display:flex;
 }
 #testimonial .container .inner-container .section-info .section-view{
-    text-align:left;
+    text-align: left;
     padding: 30px 20px;
     background-color: var(--light-text);
     width: 70%;
+    border-radius: 0 5px 5px 0;
 }
 #testimonial{
     background-color: var(--section-background);
 }
 #testimonial .inner-container .section-info img{
     object-fit: cover;
-    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px 0 0 5px;
 }
 /* blogs section start */
 #blogs .container{
     text-align: center;
+    justify-content: space-between;
+    padding: 100px 0;
+}
+#blogs .section-info{
+    background-color: var(--section-background);
+    padding: 20px;
+    width: 350px;
+    height: 480px;
+    text-align: left;
+    margin: 0 12px;
+    border-radius: 5px;
+}
+#blogs .section-info .section-view h3,h5 {
+    padding: 10px 0;
+}
+#blogs .section-info .section-view a{
+    padding: 10px 0;
+}
+#blogs .container .row a{
+    padding: 16px 21px;
+    background-color: var(--section-background);
+    color: var(--dark-text);
+    transition: 0.5s;
+    border-radius: 5px;
+}
+#blogs .container .row a:hover{
+    background-color: var(--btn-color);
+}
+#blogs .container .row .browse{
+    text-align: center;
+    margin: 60px auto;
+}
+#blogs .container .section-info:hover{
+    background-color: var(--fast-color);
+    color: var(--light-text);
+    transition: .6s;
 }
